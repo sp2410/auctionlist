@@ -1,0 +1,62 @@
+<div class="container">
+ <div class="leftbar">
+  <a href="#"><h1>Auction List</h1></a>
+  </div>
+  <div class="center-column" >
+    <div class="center-one">  
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'Resturants', category_path(@rest) %></th>
+        </tr>
+        <tr>
+          <td>
+            <% @rest.products.each do |products| %>
+              <ul>
+                <li><%= link_to products.name, category_products_path(@rest, products) %></li>               
+              </ul> 
+              <% end %>           
+          </td>
+        </tr>
+      </table> 
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'Industrial', category_path(@indus) %></th>
+        </tr>
+        <tr>
+          <td>
+            <% @indus.products.each do |products| %>
+              <ul>
+                <li><%= link_to products.name, category_products_path(@indus, products) %></li>               
+              </ul> 
+              <% end %>           
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'Commercial', category_path(@commer) %></th>
+        </tr>
+        <tr>
+          <td>
+            <% @commer.products.each do |products| %>
+              <ul>
+                <li><%= link_to products.name, category_products_path(@commer, products) %></li>               
+              </ul> 
+              <% end %>           
+          </td>
+        </tr>
+      </table> 
+    </div>
+  </div>
+  <div class="rightbar">
+    <ul class="rightbar-top">
+      <li><%= link_to 'help and faq', help_path %></li>      
+      <li><%= link_to 'avoid scams & fraud', scams_path %></li>
+      <li><%= link_to 'personal safety tips', safety_path %></li>          
+      <li class="rightbar-top"><%= link_to 'terms of use', terms_path %></l>
+      <li><%= link_to 'privacy policy', policy_path %></li>            
+      <li><%= link_to 'about AuctionList', about_path %></li>
+      <li><%= link_to 'contact us', contact_path %></li>
+    </ul>
+  </div>  
+</div>
