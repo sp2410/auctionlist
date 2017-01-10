@@ -1,0 +1,15 @@
+{
+  "name": "node-mygame",
+  "version": "1.0.0",
+  "description": "newgame multiplayer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "multiplayergamenodejs"
+  },
+  "author": "sp2410",
+  "license": "ISC"
+}
